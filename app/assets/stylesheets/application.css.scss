@@ -17,6 +17,35 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.greeting {
+	font-size: 36px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	padding: 15px 0;
+	a {
+		color: #2F363E;
+	}
+}
+
+.flash{
+	
+	padding-top: 40px; 
+}
+
+.body{
+	
+	padding-top: 30px; 
+}
+
+.alert{
+	margin-bottom: 0px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+
+	
+}
+
 #logo {
 	font-size: 28px;
 	font-weight: 700;
