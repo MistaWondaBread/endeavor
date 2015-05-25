@@ -3,7 +3,7 @@
 </div>
 
 <div class="btn-group">
-	<%= link_to 'Visit URL', "http://#{@link.url}", class: "btn btn-primary" %>
+	<%= link_to 'Visit URL', "http://#{@link.url}", class: "btn btn-success" %>
 </div>
 
 <% if @link.user == current_user -%>
@@ -38,6 +38,6 @@
     <%= f.text_area :body, class: "form-control" %>
   </div>
   <br>
-  <%= f.submit "Add Comment", class: "btn btn-primary" %>
+  <%= f.submit "Add Comment", class: "btn btn-success" %>
 <% end %>
 
