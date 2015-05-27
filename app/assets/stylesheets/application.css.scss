@@ -17,6 +17,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+	
+
 .greeting {
 	font-size: 36px;
 	font-weight: 700;
@@ -28,28 +31,19 @@
 	}
 }
 
-.well{
-	
-	
+.background {
+ background: url('image3.jpg');
+
+ background-repeat: no-repeat;
+ position: fixed;
+-webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+  background-size: cover;
+  width:100%; height:100%;
 }
 
-.background{
-	  background: url(background1.jpg) 
-	  no-repeat center center fixed;
-	  z-index: -1;
-	  width: 100%;
-	  height: 100%;
-	  position: absolute; 
-	  -webkit-background-size: cover;
-	  -moz-background-size: cover;
-	  -o-background-size: cover;
-	  background-size: cover;
-	  -webkit-filter: blur(6px);
-	  -moz-filter: blur(6px);
-	  -o-filter: blur(6px);
-	  -ms-filter: blur(6px);
-	  filter: blur(6px);
-}
+
 
 .flash{
 	
@@ -88,7 +82,8 @@
 	padding-bottom: 100px;
 	.link {
 		padding: 2em 1em;
-		border-bottom: 1px solid #e9e9e9;
+		border-top: 2px solid #e9e9e9;
+		border-bottom: 2px solid #e9e9e9;
 		.title {
 
 			a {
