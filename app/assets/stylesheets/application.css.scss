@@ -28,6 +28,29 @@
 	}
 }
 
+.well{
+	
+	
+}
+
+.background{
+	  background: url(background1.jpg) 
+	  no-repeat center center fixed;
+	  z-index: -1;
+	  width: 100%;
+	  height: 100%;
+	  position: absolute; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	  -webkit-filter: blur(6px);
+	  -moz-filter: blur(6px);
+	  -o-filter: blur(6px);
+	  -ms-filter: blur(6px);
+	  filter: blur(6px);
+}
+
 .flash{
 	
 	padding-top: 40px; 
@@ -36,6 +59,7 @@
 .body{
 	
 	padding-top: 30px; 
+
 }
 
 .alert{
@@ -68,7 +92,7 @@
 		.title {
 
 			a {
-				color: #FF4500;
+				color: #FFF;
 			}
 		}
 	}
