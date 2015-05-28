@@ -10,8 +10,12 @@
 
 			<div class="btn-group pull-left">
 			<% if comment.user == current_user -%>
-				<%= link_to 'Delete', comment, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-xs btn-default" %>
+				<%= link_to 'Modify', comment, method: :edit, data: { confirm: 'Are you sure?' }, class: "btn btn-xs btn-default" %>
+
+				<%= link_to 'Delete', comment, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-xs btn-danger" %>
 			<% end %>
+
+
 			</div>
 		</div>
 

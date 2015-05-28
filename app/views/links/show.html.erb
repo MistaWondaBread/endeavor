@@ -1,13 +1,15 @@
 <div class="well">
 <div class="page-header">
   <h2>
-    <a href="<%= "http://#{@link.url}"%>"><%= @link.title %></a> <% if @link.user == current_user -%>
-  <div class="btn-group pull-right">
-    <%= link_to 'Edit', edit_link_path(@link), class: "btn btn-sm btn-default" %>
-    <%= link_to 'Delete', @link, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-danger" %>
+    <a href="<%= "http://#{@link.url}"%>"><%= @link.title %></a> 
+    <br> 
+    <small>Submitted by <%= @link.user.name %></small> <div class="btn-group ">
+    <% if @link.user == current_user -%>
+    <%= link_to 'Modify', edit_link_path(@link), class: "btn btn-default btn-xs" %>
+    <%= link_to 'Delete', @link, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-xs btn-danger" %>
+
   </div>
-<% end %><br> 
-    <small>Submitted by <%= @link.user.name %></small>
+   <% end %>
   </h2>
 </div>
 
@@ -26,16 +28,16 @@
 
 <div id="comments">
   <%= render :partial => @link.comments %>
-</div>
-<%= simple_form_for [@link, Comment.new]  do |f| %>
-  <div class="field">
-    <%= f.text_area :body, class: "form-control" %>
   </div>
+<%= simple_form_for [@link, Comment.new]  do |f| %>
+   <div class="textarea">
+    <%= f.text_area :body, class: "form-control" %>
+    </div>
   <br>
-  <%= f.submit "Add Comment", class: "btn btn-primary" %>
+  <%= f.submit "Comment", class: "btn btn-primary" %>
   <div class="btn-group">
   <%= link_to like_link_path(@link), method: :put, class: "btn btn-success btn" do %>
-    <span class="glyphicon glyphicon-chevron-up"></span>
+    
     Like
     (<%= @link.get_upvotes.size %>)
   <% end %>
