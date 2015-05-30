@@ -15,3 +15,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+function resizeBackground() {
+    bg.height(jQuery(window).height() + 60);
+}
