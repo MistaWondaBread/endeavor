@@ -23,6 +23,14 @@
 	padding: 15px 10px;
 	}
 
+	.alert{
+	  margin-bottom: -16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  z-index: 1;
+  margin-top: 28px;
+	}
+
 
 }
 
@@ -33,14 +41,14 @@
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) {
 
-  #logo{
-    color: #2F363E;
-	font-size: 8px;
-	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: -2px;
-	padding: 15px 10px;
+  .alert{
+	  margin-bottom: -16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  z-index: 1;
+  margin-top: 28px;
 	}
+
 }
 
 /* Landscape */
@@ -49,15 +57,6 @@
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: landscape) {
-
-  #logo{
-    color: #2F363E;
-	font-size: 8px;
-	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: -2px;
-	padding: 15px 10px;
-	}
 
 }
 
@@ -68,6 +67,15 @@
   and (min-device-width: 320px) 
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
+
+  .alert{
+	  margin-bottom: -16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  z-index: 1;
+  margin-top: 28px;
+	}
+
 
 }
 
@@ -95,6 +103,15 @@
   and (min-device-width: 375px) 
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2) { 
+
+  .alert{
+	  margin-bottom: -16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  z-index: 1;
+  margin-top: 28px;
+	}
+
 
 }
 
@@ -124,15 +141,6 @@
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3) { 
 
-  #logo{
-    color: #2F363E;
-	font-size: 8px;
-	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: -2px;
-	padding: 15px 10px;
-	}
-
 }
 
 /* Portrait */
@@ -159,7 +167,7 @@
     top: 0;
   }
 
-  #logo{
+   #logo{
     color: #2F363E;
 	font-size: 8px;
 	font-weight: 600;
@@ -211,17 +219,17 @@
 }
 
 #signinwell{
-	margin-top: 6.9em;
+	margin-top: 0em;
 	padding-top: 0em;
 	}
 
 #signupwell {
-	margin-top: 6.9em;
+	margin-top: 0em;
 	padding-top: 0em;
 	}
 
 #editprofilewell{
-	margin-top: 6.9em;
+	margin-top: 0em;
 	padding-top: 0em;
 
 }
@@ -335,7 +343,6 @@ textarea{
 }
 
 .alert{
-	margin-bottom: 0px;
 	padding-top: 15px;
 	padding-bottom: 15px;
 	z-index: 1;
@@ -353,7 +360,6 @@ textarea{
 	a {
 		text-decoration: none; 
 		color: #2F363E;
-
 	}
 
 
@@ -372,7 +378,7 @@ textarea{
 	#content {
 		float: none;
 	}
-	padding-bottom: 100px;
+	padding-bottom: 10px;
 	.link {
 
 		padding: .5em 1em;
