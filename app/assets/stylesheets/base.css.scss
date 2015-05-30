@@ -161,6 +161,22 @@
 
 }
 
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 400px) 
+  and (max-device-width: 691px) 
+  and (-webkit-min-device-pixel-ratio: 4) { 
+
+   .input-group {
+        width: 100%;
+        padding-left:0;
+        padding-right:0;
+
+       
+  }
+}
+
+
 @media only screen and (max-width: 1700px) {
   #background img {
     margin-top: 0;
@@ -176,6 +192,8 @@
 	padding: 15px 10px;
 	}
 }
+
+
 
 
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Endeavor: Tell Your Story</title>
+  <title>Endeavor: Share Your Story</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -9,6 +9,7 @@
 </head>
 
 <body>
+   
 <div class="navbar navbar-default navbar-fixed-top">
    <div class="container">
       <div class="navbar-header">
@@ -17,7 +18,7 @@
          <span class="icon-bar"></span>
          <span class="icon-bar"></span>
          </button>
-        <div id="logo" class="navbar-brand"><%= link_to "ENDEAVOR", root_path %></div>
+        <div id="logo" class="navbar-brand"><%= link_to "ENDEAVOR", root_path %></div> 
        
         <form class="navbar-form pull-left" role="search">
             <div class="input-group">
@@ -27,13 +28,16 @@
                   <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
                </div>
             </div>
+
          </form>
+
+
    
       </div>
       <div class="navbar-collapse collapse">
          	<ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? -%>
-<li><%= link_to 'Submit Idea', new_link_path %></li>
+<li><%= link_to 'Share Endeavor', new_link_path %></li>
 <li><%= link_to 'Account', edit_user_registration_path %></li>
 <li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
 <% else -%>
@@ -58,14 +62,18 @@
 <div class = "body">
 <div id="content" class="col-md-8 center-block">
 <%= yield %>
-</div>
-</div>
-</div>
+
 </div>
 
-
-
+</div>
+</div>
+</div>
 
 </body>
+
+  
+         
+
+
 
 </html>
