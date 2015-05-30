@@ -17,6 +17,9 @@
 //= require_tree .
 
 
+var x = document.getElementById("bg")
 function resizeBackground() {
-    bg.height(jQuery(window).height() + 60);
+    x.height(jQuery(window).height() + 60);
 }
+
+resizeBackground();
