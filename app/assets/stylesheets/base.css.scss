@@ -52,6 +52,11 @@
     box-shadow: none;
 }
 
+#main_container {
+  width: inherit;
+  height: inherit;
+  overflow-y: scroll;
+}
 
 
 
