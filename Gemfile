@@ -51,5 +51,7 @@ group :development, :test do
   gem 'simple_form', '~> 3.1.0'
 
   gem 'rename', '~> 1.0.2'
+
+gem 'bootswatch-rails'
 end
 

@@ -1,17 +1,16 @@
 <% @links.each do |link| %>
 <div class="row">
-    <div class="col-lg-8 col-md-offset-2">
+    <div class="col-lg-10 col-md-offset-1">
   <div class= "well" id="indexwell">
   <div class="link row clearfix">
-    <h3 class="linktitle">
+    <h4 class="linktitle">
       <%= link_to link.title, link %><br>
       <small class="author">Submitted <%= time_ago_in_words(link.created_at) %> by <%= link.user.name %></small>
-    </h3>
+    </h4>
 
     <div class="btn-group">
       
-      <%= link_to like_link_path(link), method: :put, class: "btn btn-success btn," do %>
-        <span class="glyphicon glyphicon-chevron-up"></span>
+      <%= link_to like_link_path(link), method: :put, class: "btn btn-sm btn-success" do %>
         Like
         (<%= link.get_upvotes.size %>)
       <% end %>
