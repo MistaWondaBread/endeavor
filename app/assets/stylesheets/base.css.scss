@@ -1,47 +1,185 @@
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+  .navbar-brand{
+    max-width:60%;
+  }
+
+   .navbar .navbar-formm {
+        max-width: 90px;
+        padding-left:0;
+        padding-right:0;
+
+       
+}
+    #logo{
+    color: #2F363E;
+	font-size: 8px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: -2px;
+	padding: 15px 10px;
+	}
+
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+  #logo{
+    color: #2F363E;
+	font-size: 8px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: -2px;
+	padding: 15px 10px;
+	}
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+  #logo{
+    color: #2F363E;
+	font-size: 8px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: -2px;
+	padding: 15px 10px;
+	}
+
+}
+
+/* ----------- iPhone 5 and 5S ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+
+}
+
+/* ----------- iPhone 6+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+  #logo{
+    color: #2F363E;
+	font-size: 8px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: -2px;
+	padding: 15px 10px;
+	}
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+}
+
 @media only screen and (max-width: 1700px) {
   #background img {
     margin-top: 0;
     top: 0;
   }
-}
 
-
-@media only screen and (min-width: 280px) {
-    .navbar .navbar-form {
-        max-width: 200px;
-        padding-left:0;
-        padding-right:0;
-    }
-    #logo{
+  #logo{
     color: #2F363E;
-	font-size: 15px;
+	font-size: 8px;
 	font-weight: 600;
 	text-transform: uppercase;
 	letter-spacing: -2px;
 	padding: 15px 10px;
-	a {
-		text-decoration: none; 
-		color: #2F363E;
 	}
-
-
-   } 
-
 }
 
 
-@media only screen and (max-width: 767px) {
-    .navbar .navbar-form {
-        width: 185px;
-        padding-left:0;
-        padding-right:0;
-    }
-}
-@media only screen and (max-width:768px) {
-    .navbar .navbar-form {
-        width: 250px;
-    }
-}
+
+
+
+
+
+
+
+
+
+
 .navbar .navbar-form {
     padding-top: 0;
     padding-bottom: 0;
@@ -73,17 +211,17 @@
 }
 
 #signinwell{
-	margin-top: 0em;
+	margin-top: 6.9em;
 	padding-top: 0em;
 	}
 
 #signupwell {
-	margin-top: 0em;
+	margin-top: 6.9em;
 	padding-top: 0em;
 	}
 
 #editprofilewell{
-	margin-top: 0em;
+	margin-top: 6.9em;
 	padding-top: 0em;
 
 }
@@ -215,6 +353,7 @@ textarea{
 	a {
 		text-decoration: none; 
 		color: #2F363E;
+
 	}
 
 
