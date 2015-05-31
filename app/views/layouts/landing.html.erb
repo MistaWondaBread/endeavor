@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Endeavor: Share Your Story</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+   
+<div class="navbar navbar-default navbar-fixed-top">
+   <div class="container">
+      <div class="navbar-header">
+         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         </button>
+        <div id="logo" class="navbar-brand"><strong><%= link_to "ENDEAVOR", root_path %></strong></div> 
+       
+        <form class="navbar-form pull-left" role="search">
+            <div class="input-group">
+
+               <input type="text" class="form-control" placeholder="Search">
+               <div class="input-group-btn">
+                  <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+               </div>
+            </div>
+
+         </form>
+
+
+   
+      </div>
+      <div class="navbar-collapse collapse">
+         	<ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in? -%>
+<li><%= link_to 'Share Endeavor', new_link_path %></li>
+<li><%= link_to 'Account', edit_user_registration_path %></li>
+<li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
+<% else -%>
+<li><%= link_to 'Sign Up', new_user_registration_path %></li>
+<li><%= link_to 'Sign In', new_user_session_path %></li>
+<% end -%>
+</ul>
+      </div>
+    </div>
+</div>
+
+  
+      <div class="jumbotron">
+     
+    	 
+        <div class="container">
+
+
+		
+			<div class="row" id="jumborow">
+			<div class="col-md-8">
+				<h1 class="text-center">Succeed, Together.</h1>
+				<h3 class="text-center" class="market">A Home For The Inspired.</h3>
+
+			</div>
+
+
+		<div class="col-md-4">
+		<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+		  <%= devise_error_messages! %>
+
+		    <div class="form-group">
+		     
+		      <%= f.text_field :name, :placeholder => "Username", autofocus: true, class: "form-control", required: true %>
+		    </div>
+
+		    <div class="form-group">
+		     
+		      <%= f.email_field :email, :placeholder => "Email",autofocus: true, class: "form-control", required: true %>
+		    </div>
+
+		    <div class="form-group">
+		   
+		      <%= f.password_field :password,:placeholder => "Password", class: "form-control", required: true %>
+		    </div>
+
+		    <div class="form-group">
+		     
+		      <%= f.password_field :password_confirmation, :placeholder => "Password Confirmation",class: "form-control", required: true %>
+		    </div>
+			
+		    <div class="form-group">
+
+		      <%= f.submit "Sign up for Endeavor", class: "btn btn-lg btn-success" %>
+		    </div>
+
+		  
+			
+		<% end %>
+	</div>
+		</div>
+
+
+
+    </div>
+</div>
+  <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Broadcast</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          
+        </div>
+        <div class="col-md-4">
+          <h2>Connect</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          
+       </div>
+        <div class="col-md-4">
+          <h2>Explore</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+         
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; EndeavorInc 2015</p>
+      </footer>
+    </div> <!-- /container -->
+
