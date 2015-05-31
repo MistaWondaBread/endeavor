@@ -3,6 +3,12 @@
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2) {
 
+  #signinwell{
+  max-width: 50%;
+  margin-top: 5em;
+  padding-top: 0em;
+  }
+
   .navbar-brand{
     max-width:60%;
   }
@@ -103,6 +109,17 @@
   and (min-device-width: 375px) 
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2) { 
+  
+  
+   #signinwell{
+  max-width: 50%;
+  margin-top: 5em;
+  padding-top: 0em;
+  }
+
+  
+
+
 
   .alert{
 	  margin-bottom: -16px;
@@ -139,7 +156,9 @@
 @media only screen 
   and (min-device-width: 414px) 
   and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
+ { 
+  
+
 
 }
 
@@ -149,6 +168,12 @@
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: portrait) { 
+
+   #signinwell{
+  max-width: 50%;
+  margin-top: 5em;
+  padding-top: 0em;
+  }
 
 }
 
@@ -237,7 +262,8 @@
 }
 
 #signinwell{
-	margin-top: 0em;
+
+	margin-top: 5em;
 	padding-top: 0em;
 	}
 
