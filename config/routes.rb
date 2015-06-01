@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :comments
   devise_for :users, :controllers => { :registrations => :registrations }
-  
+
   
 
   resources :links do
@@ -13,6 +13,11 @@ Rails.application.routes.draw do
     end
     resources :comments
   end
+
+  def after_update_path_for(resource)
+      user_path(resource)
+    end
+end
 
 
 
