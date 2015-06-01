@@ -29,22 +29,23 @@
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-        <% if user_signed_in? -%>
-        <li><%= link_to 'Share Endeavor', new_link_path %></li>
-        <li><%= link_to 'Account', edit_user_registration_path %></li>
-        <li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
-        <% else -%>
-        <form class="navbar-form navbar-right">
-          <div class="form-group">
-            <input type="text" placeholder="Email" class="form-control">
-          </div>
-          <div class="form-group">
-            <input type="password" placeholder="Password" class="form-control">
-          </div>
-          <button type="submit" class="btn btn-success">Sign in</button>
-        </form>
-    </div>
-      <% end -%>
+
+
+  
+ 
+<%= form_for(:user, :url => session_path(:user), html: { class: "navbar-form navbar-right form-inline" }) do |f| %>
+        <div class="form-group">
+          <%= f.text_field :email, :placeholder => "Email", class: "form-control" %> 
+        </div>
+        <div class="form-group">
+          <%= f.password_field :password, :placeholder => "Password", class: "form-control"  %>
+        </div>
+        <%= f.submit 'Login', class: "btn btn-success" %>
+<% end %>
+
+
+      
+      </div>
         </ul>
       </div>
     </div>
@@ -112,7 +113,7 @@
       
       <footer class="footer"> 
       <div class="container">
-        <div class="footer-text"><p class="text-center text-muted">&copy; EndeavorInc 2015 - Alpha.</p></div>
+        <div class="footer-text"><p class="text-center text-muted">&copy; EndeavorInc. 2015 - Alpha</p></div>
       </div>
     </footer>
     
