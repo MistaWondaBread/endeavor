@@ -19,4 +19,6 @@ class ApplicationController < ActionController::Base
   	links_path
   end
 
+
+
 end
