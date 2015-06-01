@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'landing/index'
 
   resources :comments
-  devise_for :users, :controllers => { :registrations => :registrations }
+  devise_for :users
 
   
 
