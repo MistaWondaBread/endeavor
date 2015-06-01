@@ -17,7 +17,6 @@ Rails.application.routes.draw do
   def after_update_path_for(resource)
       user_path(resource)
     end
-end
 
 
 
