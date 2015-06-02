@@ -30,6 +30,7 @@
       <div class="navbar-collapse collapse">
         <% if user_signed_in? -%>
             <ul class="nav navbar-nav navbar-right">
+              <li><%= link_to 'Feed', links_path%></li>
               <li><%= link_to 'Share Endeavor', new_link_path %></li>
               <li><%= link_to 'Account', edit_user_registration_path %></li>
               <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
