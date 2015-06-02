@@ -17,23 +17,17 @@
          <span class="icon-bar"></span>
          </button>
         <div id="logo" class="navbar-brand"><strong><%= link_to "ENDEAVOR", root_path %></strong></div>
-        <form class="navbar-form pull-left" role="search">
-            <div class="input-group" id="search-box">
-               <input type="text" class="form-control" placeholder="Search">
-               <div class="input-group-btn">
-                  <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
-               </div>
-            </div>
-            <button type="submit" class="btn btn-primary">Explore</button>
-         </form>
+        
       </div>
       <div class="navbar-collapse collapse">
+        <% if user_signed_in? -%>
+            <ul class="nav navbar-nav navbar-right">
+              <li><%= link_to 'Share Endeavor', new_link_path %></li>
+              <li><%= link_to 'Account', edit_user_registration_path %></li>
+              <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
+            <% else -%>
         <ul class="nav navbar-nav navbar-right">
-
-
-  
- 
-<%= form_for(:user, :url => session_path(:user), html: { class: "navbar-form navbar-right form-inline" }) do |f| %>
+      <%= form_for(:user, :url => session_path(:user), html: { class: "navbar-form navbar-right form-inline" }) do |f| %>
         <div class="form-group">
           <%= f.text_field :email, :placeholder => "Email", class: "form-control" %> 
         </div>
@@ -41,7 +35,8 @@
           <%= f.password_field :password, :placeholder => "Password", class: "form-control"  %>
         </div>
         <%= f.submit 'Login', class: "btn btn-success" %>
-<% end %>
+    <% end %>
+     <% end -%>
 
 
       
@@ -59,7 +54,7 @@
 				    <h1 class="text-center">Succeed, Together.</h1>
 				    <h3 class="text-center" class="market">Share Your Journey With Endeavor.</h3>
 			  </div>
-		  <div class="col-md-3 col-offset-md-1">
+		  <div class="col-md-3 col-offset-md-1 hidden-sm hidden-xs">
 		  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 		  <%= devise_error_messages! %>
 		    <div class="form-group">
@@ -79,11 +74,13 @@
 		    </div>
 		    <div class="form-group">
           <p align="center" id="submitbutton">
-		      <%= f.submit "Sign up for Endeavor", class: "btn btn-lg btn-block btn-success" %>
+		      <%= f.submit "Sign up for Endeavor", class: "btn btn-lg btn-block btn-primary" %>
           </p>
 		    </div>
 		<% end %>
 	</div>
+    <p>""</p>
+    <%= link_to '<button type="button" class = "hidden-md hidden-lg btn btn-lg btn-primary center-block" id="mobile-signbutton">Sign Up Today!</button>'.html_safe, new_user_registration_path %>
 		</div>
     </div>
 </div>
@@ -113,11 +110,8 @@
       <div class="container">
         <div class="row">
         <div class="footer-text">
-        <div class="col-md-2 text-muted">&copy;  2015 Endeavor, Inc.</muted></div>
-        <div class="col-md-1 text-muted">Terms</div>
-        <div class="col-md-1 text-muted">Privacy</div>
-        <div class="col-md-1 text-muted">Security</div>
-        <div class="col-md-1 text-muted">Contact</div>
+        <div class="col-md-12 text-muted text-center">&copy;  2015 Endeavor, Inc.</muted></div>
+     
         </div>
         <div>
       </div>
